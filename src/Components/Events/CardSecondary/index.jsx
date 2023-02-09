@@ -17,18 +17,18 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 
-export default function CardSecondary() {
+export default function CardSecondary({ day, month, title, subHeader }) {
 
     return (
         <Card style={{ border: "none" }} variant="outlined" >
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: '#196578', fontSize: "15px", textAlign: "center" }} >
-                        Dec<br /> 1
+                        {month}<br /> {day}
                     </Avatar>
                 }
-                title="Shrimp and Chorizo Paella"
-                subheader="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum provident eligendi rem fuga? Nesciunt at fugit nulla ex fugiat omnis voluptate voluptatem eveniet tenetur sapiente. Ducimus quae eligendi iusto quibusdam."
+                title={title}
+                subheader={subHeader}
             />
         </Card>
     )

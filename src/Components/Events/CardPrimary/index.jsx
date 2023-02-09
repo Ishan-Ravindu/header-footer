@@ -5,20 +5,19 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-export default function CardPrimary() {
+export default function CardPrimary({ title, description, handleLearnMoreButtonClick }) {
     return (
         <Card style={{ border: "none" }} variant="outlined" >
             <CardContent style={{ border: "none" }}>
                 <Typography variant="h5" component="div">
-                    Transitional Update : CLIC to CCOS
+                    {title}
                 </Typography>
                 <Typography variant="body2">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corrupti sapiente cum ducimus? Possimus facilis amet expedita repellendus assumenda! Quis praesentium nulla provident sequi perferendis nihil ad debitis! Mollitia, alias.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corrupti sapiente cum ducimus? Possimus facilis amet expedita repellendus assumenda! Quis praesentium nulla provident sequi perferendis nihil ad debitis! Mollitia, alias.
+                    {description}
                 </Typography>
             </CardContent>
             <CardActions style={{ display: "flex", justifyContent: "flex-end" }}>
-                <Button size="small">Learn More</Button>
+                <Button onClick={handleLearnMoreButtonClick} size="small">Learn More</Button>
             </CardActions>
         </Card>
     )
